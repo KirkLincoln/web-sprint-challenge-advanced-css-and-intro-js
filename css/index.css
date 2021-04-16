@@ -89,7 +89,7 @@ nav span{
 }
 .title-container div {	
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg/1920px-John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg');		
-    background-position: center;	
+    background-position: center;
     color: white;	
     width:80%;
     display:flex;
@@ -137,12 +137,18 @@ button:hover{
 
 @media (max-width: 500px) {
     nav {
-        width: 70% !important;
-        font-size: small !important;
+        width: 60% !important;
+        padding: 4%;
+        line-height: .9;
+        
     }
 
     .title-container div {
-        width: 100% !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 90vh !important;
+        
     }
 
     .artists-container {
@@ -171,5 +177,4 @@ button:hover{
         max-width: 100%;
         height: auto;
     }
-
 }
