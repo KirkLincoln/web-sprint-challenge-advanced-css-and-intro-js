@@ -228,10 +228,9 @@ There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is current
  
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(/*Your Code Here*/) {
-  /*Your Code Here*/
+function getArtistByIndex(artists, index) {
+  return `the artist at index ${index} is ${artists[index].name}`
 }  
-
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -242,8 +241,23 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
-  /*Your Code Here*/
+function get20s(artists){
+  const result = [];
+
+  artists.filter(artist => {
+    const alive = artist.years.split(' ');
+    const timespan = getDate(alive)
+
+    timespan.start >= 1900 && timespan.end <= 2000 ? result.push(artist.name) : null
+  })
+  return result
+}
+
+function getDate(dateArr) {
+  const start = parseInt(dateArr[0]);
+  const end = parseInt(dateArr[2]);
+
+  return {start, end}
 }
 
 
@@ -257,8 +271,9 @@ function get20s(/*Your Code Here*/){
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/){
-   /*Your Code Here*/
+function removeArtist(artists, id){
+  artists.splice(id, 1)
+  return artists.length
 }
    
 
@@ -278,9 +293,20 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+function addArtist(artists){
+  const newArtist = { 
+    id: 20,
+    name: `Kirk Lincoln`, 
+    years: `1991 - 2021`,
+    genre: `Web development`, 
+    nationality: `Irish`,
+    bio: `I use mainly charcoal but have dabbled in water colors as well.  My favorite form of art would be writing music with a guitar.`
+  }  
+
+  artists.push(newArtist)
+  return artists
+}
+
 
   
 
@@ -291,8 +317,14 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(artists){
+  const result = [];
+
+  artists.filter(artist => {
+    artist.paintings > 100 ? result.push(artist.name) : null
+  })
+
+  return result;
 }
 
 
