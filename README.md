@@ -23,9 +23,13 @@ Commit your code regularly and meaningfully.
 Please answer the following questions below, you may edit the readme file to include your answers below the question.
 
 1. How would you describe acessibility on the web to someone new to programming?
-2. Talk about 3 different things you can do to ensure your website is accessible. 
+Accessibility is a feature used for disabled people focused around impaired vision.  It helps describe the website so focusing on accessbility as a standard will increase the reach of the website automatically.
+2. Talk about 3 different things you can do to ensure your website is accessible.
+Use semantic html so people understand what is being read aloud by the TTS system, use alt text with an image always, allow control over font sizes and don't use things like px to weight font.
 3. How would you explain the concept of a variable to someone new to programming?
+A variable is a box that you put stuff in.  Some languages need labels on the boxes but Javscript can put almost anything into it's boxes without labels.
 4. What is the purpose of using functions in code?
+Functions help when you or someone else looks back over your code 3 years from now.  It also helps organize code, so if you write clean code, the functions can be considered chapters and paragraphs of the novel, with the code within itself are the sentences.  Another important aspect is that it allows you to split parts of the OSI model so networking doesn't conflict with things that should be done in service or on the application level, and vice versa.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
